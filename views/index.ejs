@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propedia Prototype</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .content-overlay {
+            position: relative;
+            z-index: 2;
+            padding-top: 100px; /* Espaço para o header */
+            margin-top: 50px;
+            margin-bottom: 40 px;
+        }
+
+        .logo-overlay {
+            position: absolute;
+            top: 90px;
+            right: 270px;
+            z-index: 3;
+            height: 60px;
+        }
+        
+    .custom-spacing {
+        line-height: 1.8; 
+        margin-bottom: 2rem !important; 
+        padding: 1.5rem 0; 
+    }
+
+    </style>
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <section class="hero-section">
+        <!-- Imagem de fundo -->
+        <img src="/images/protein-image.jpg" 
+             alt="Protein Interaction" 
+             class="hero-image">
+
+        <!-- Logo -->
+        <div class="logo-overlay">
+            <img src="/images/logo.png" alt="Logo" class="img-fluid">
+        </div>
+
+        <!-- Conteúdo de texto -->
+        <div class="container content-overlay">
+            <div class="row">
+                <div class="col-lg-6 text-black">
+                    <h1 class="display-3 fw-bold mb-2"style="font-size: 1.8rem">A database of peptide-protein interactions</h1>
+                        
+
+                        <p class="custom-spacing">
+                            PROPEDIA is a database of peptide-protein complexes clusterized in three
+                            methodologies: (i) peptide sequences; (ii) structure interface; (iii) binding sites.
+                            PROPEDIA main goal is to give new insights into peptide design of biotechnological
+                             interests.
+                        </p>
+                        <button class="btn btn-success btn-lg px-5 py-3">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container my-5">
+        <div class="row text-center">
+          <div class="col-md-3 mb-4">
+            <div class="border rounded p-4" style="border-left: 5px solid #8c6239;">
+              <img src="/public/images/p1.png" alt="DB" style="height: 200px;">
+              <h3 class="mt-3">19,813</h3>
+              <p class="text-uppercase small fw-bold">Peptide-Protein Complexes*</p>
+            </div>
+          </div>
+      
+          <div class="col-md-3 mb-4">
+            <div class="border rounded p-4" style="border-left: 5px solid #28a745;">
+              <img src="/public/images/p2.png" alt="Sequence" style="height: 40px;">
+              <h3 class="mt-3">1,845</h3>
+              <p class="text-uppercase small fw-bold">Sequence Clusters</p>
+            </div>
+          </div>
+      
+          <div class="col-md-3 mb-4">
+            <div class="border rounded p-4" style="border-left: 5px solid #d9534f;">
+              <img src="/public/images/p3.png" alt="Interface" style="height: 40px;">
+              <h3 class="mt-3">1,891</h3>
+              <p class="text-uppercase small fw-bold">Interface Clusters</p>
+            </div>
+          </div>
+      
+          <div class="col-md-3 mb-4">
+            <div class="border rounded p-4" style="border-left: 5px solid #007bff;">
+              <img src="/public/images/p4.png" alt="Binding Site" style="height: 40px;">
+              <h3 class="mt-3">1,466</h3>
+              <p class="text-uppercase small fw-bold">Binding Site Clusters</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <%- include('partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
